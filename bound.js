@@ -32,14 +32,26 @@ function inc_top (obj, value) {
   var bounds = get_bound(obj, 'g');
   obj.geometricBounds = [ bounds[0] - value, bounds[1], bounds[2], bounds[3] ];
 }
+/**
+ * @param {Object} obj FrameObject
+ * @param {Number} value plus value to increase, minus value to decrease
+ */
 function inc_left (obj, value) {
   var bounds = get_bound(obj, 'g');
   obj.geometricBounds = [ bounds[0], bounds[1] - value, bounds[2], bounds[3] ];
 }
+/**
+ * @param {Object} obj FrameObject
+ * @param {Number} value plus value to increase, minus value to decrease
+ */
 function inc_bottom (obj, value) {
   var bounds = get_bound(obj, 'g');
   obj.geometricBounds = [ bounds[0], bounds[1], bounds[2] + value, bounds[3] ];
 }
+/**
+ * @param {Object} obj FrameObject
+ * @param {Number} value plus value to increase, minus value to decrease
+ */
 function inc_right (obj, value) {
   var bounds = get_bound(obj, 'g');
   obj.geometricBounds = [ bounds[0], bounds[1], bounds[2], bounds[3] + value ];
