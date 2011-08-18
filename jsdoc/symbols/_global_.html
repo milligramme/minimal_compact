@@ -235,7 +235,25 @@ ul.inheritsList
 						<tr>
 							<td class="attributes">&nbsp;</td>
 							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#check_style_exist">check_style_exist</a></b>(target, style_type, name)
+								</div>
+								<div class="description"></div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
 								<div class="fixedFont"><b><a href="../symbols/_global_.html#def_doc">def_doc</a></b>(addnew, visible)
+								</div>
+								<div class="description"></div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#export_source">export_source</a></b>(file_path, content, mode)
 								</div>
 								<div class="description"></div>
 							</td>
@@ -263,6 +281,15 @@ ul.inheritsList
 							<td class="attributes">&nbsp;</td>
 							<td class="nameDescription">
 								<div class="fixedFont"><b><a href="../symbols/_global_.html#get_size">get_size</a></b>(obj, mode)
+								</div>
+								<div class="description"></div>
+							</td>
+						</tr>
+					
+						<tr>
+							<td class="attributes">&nbsp;</td>
+							<td class="nameDescription">
+								<div class="fixedFont"><b><a href="../symbols/_global_.html#import_source">import_source</a></b>(file_path)
 								</div>
 								<div class="description"></div>
 							</td>
@@ -323,6 +350,75 @@ ul.inheritsList
 					Method Detail
 				</div>
 				
+					<a name="check_style_exist"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{Array}</span>
+					<b>check_style_exist</b>(target, style_type, name)
+					
+					</div>
+					<div class="description">
+						
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/style.js.html">style.js</a>.
+						
+						
+					</div>
+					
+					
+					
+					<pre class="code">var result = [
+  check_style_exist (app.documents[0],'characterStyles','bold'),
+  check_style_exist (app.documents[0],'paragraphStyles','base'),
+  check_style_exist (app.documents[0],'objectStyles','anchor'),
+  check_style_exist (app.documents[0],'tableStyles','main'),
+  check_style_exist (app.documents[0],'cellStyles','head')
+];
+$.writeln(result);</pre>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{Object}</span> <b>target</b>
+									
+								</dt>
+								<dd>Parent Object App, Document</dd>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>style_type</b>
+									
+								</dt>
+								<dd>characterStyles, paragraphStyles,,.,</dd>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>name</b>
+									
+								</dt>
+								<dd>Name to find</dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{Array}</span> [True, parent] if exist, [false, null] if not</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
 					<a name="def_doc"> </a>
 					<div class="fixedFont">
 					
@@ -369,6 +465,57 @@ ul.inheritsList
 								<dd><span class="light fixedFont">{Object}</span> document</dd>
 							
 							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="export_source"> </a>
+					<div class="fixedFont">
+					
+					
+					<b>export_source</b>(file_path, content, mode)
+					
+					</div>
+					<div class="description">
+						
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/logging.js.html">logging.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>file_path</b>
+									
+								</dt>
+								<dd>File Path</dd>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>content</b>
+									
+								</dt>
+								<dd>Write</dd>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>mode</b>
+									
+								</dt>
+								<dd>'w' writemode, 'e' editmode</dd>
+							
+							</dl>
+						
+						
+						
+						
 						
 						
 						
@@ -522,6 +669,52 @@ $.writeln(get_doc_info(doc_obj)['size']);</pre>
 							<dt class="heading">Returns:</dt>
 							
 								<dd><span class="light fixedFont">{Array}</span> [width, height]</dd>
+							
+							</dl>
+						
+						
+						
+
+					<hr />
+				
+					<a name="import_source"> </a>
+					<div class="fixedFont">
+					
+					<span class="light">{Array}</span>
+					<b>import_source</b>(file_path)
+					
+					</div>
+					<div class="description">
+						
+						
+							<br />
+							<i>Defined in: </i> <a href="../symbols/src/logging.js.html">logging.js</a>.
+						
+						
+					</div>
+					
+					
+					
+						
+							<dl class="detailList">
+							<dt class="heading">Parameters:</dt>
+							
+								<dt>
+									<span class="light fixedFont">{String}</span> <b>file_path</b>
+									
+								</dt>
+								<dd></dd>
+							
+							</dl>
+						
+						
+						
+						
+						
+							<dl class="detailList">
+							<dt class="heading">Returns:</dt>
+							
+								<dd><span class="light fixedFont">{Array}</span> Return array of source text</dd>
 							
 							</dl>
 						
@@ -718,7 +911,7 @@ $.writeln(get_doc_info(doc_obj)['size']);</pre>
 <!-- ============================== footer ================================= -->
 		<div class="fineprint" style="clear:both">
 			
-			Documentation generated by <a href="http://www.jsdoctoolkit.org/" target="_blank">JsDoc Toolkit</a> 2.0.2 on Fri Aug 12 2011 17:25:11 GMT+0900 (JST)
+			Documentation generated by <a href="http://www.jsdoctoolkit.org/" target="_blank">JsDoc Toolkit</a> 2.0.2 on Thu Aug 18 2011 20:17:25 GMT+0900 (JST)
 		</div>
 	</body>
 </html>

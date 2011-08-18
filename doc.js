@@ -29,7 +29,7 @@ function get_doc_info (doc) {
   var doc_info = {};
   doc_info['size'] = [doc_pref.pageWidth, doc_pref.pageHeight];
   doc_info['facing'] = doc_pref.facingPages;
-  doc_info['colomn_dir'] = doc_pref.columnDirection === HorizontalOrVertical.HORIZONTAL ? "H" : "V"; 
+  doc_info['column_dir'] = doc_pref.columnDirection === HorizontalOrVertical.HORIZONTAL ? "H" : "V";
   doc_info['pages'] = doc_pref.pagesPerDocument;
   switch(doc_pref.pageBinding){
     case 1819570786: /*PageBindingOptions.LEFT_TO_RIGHT*/ doc_info['binding'] = "L";break;
